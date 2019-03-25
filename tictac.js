@@ -10,15 +10,19 @@ const clearBoard = ()=> {
 
 restart.addEventListener('click', clearBoard)
 
-const changeMarker = ()=> {
+function changeMarker() {
+    // e.preventDefault()
     if (this.textContent===''){
         this.textContent='X'
+        console.log('Clicked')
     }else if(this.textContent==='X'){
         this.textContent='O'
     }else{
         this.textContent = ''
     }
 }
+
+
 
 for( var i=0; i<squares.length; i++){
     squares[i].addEventListener('click', changeMarker)
